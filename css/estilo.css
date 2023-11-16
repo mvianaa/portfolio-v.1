@@ -2,7 +2,7 @@
 
 body{
     background-color: black;
-    color: #ffff;
+    color: #F6F6F6;
     box-sizing: border-box;
     height: 100vh;
 }
@@ -10,8 +10,8 @@ body{
 .conteudo{
     margin: 10% 5%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .apresentacao_conteudo{
@@ -37,20 +37,43 @@ strong{
 
 .botoes{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.redes{
+    font-size: 24px;
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
 }
 
 .btn{
-    background-color: #22D4FD;
-    border-radius: 16px;
-    width: 280px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #22D4FD; /*Esta propriedade mostra o tamnho da borda, depois se ela é tracejada ou pontilhada, etc... e após isso a cor*/
+    border-radius: 8px;
+    width: 378px;
     text-align: center;
     font-size: 24px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     text-decoration: none;
-    color: #000000;
+    color: #F6F6F6;
     padding: 21.5px 0;
+    gap: 16px;
+}
+
+.btn:hover{ /*hover é uma animação quando interagimos com este botão no navegador, para isso selecionamos o elemento, depois dois pontos e o nome da animação*/
+    background-color: #272727;
+
+}
+
+.icones{
+    width: 32px;
+    height: 32px;
+    /*padding-right: 16px; poderia utilizar o gap tbm na classe de botões, daria o mesmo efeito*/
 }
 
 img{
