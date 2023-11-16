@@ -1,20 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-body{
-    background-color: black;
-    color: #F6F6F6;
-    box-sizing: border-box;
-    height: 100vh;
+:root{
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
 }
 
-.conteudo{
-    margin: 10% 5%;
+body{
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    box-sizing: border-box;/*Faz com que os elementos filho não saiam do elemento pai, neste caso nada sairá do body*/
+    /*height: 100vh; vh significa altura da tela, ou seja estamos ocupando 100% da tela. Vh vem do metadado viewport*/
+}
+
+.cabecalho{
+    padding: 5% 0% 0% 5%;
+}
+
+.menu{
+    display: flex;
+    gap: 80px;
+}
+
+.menu_link{
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    text-decoration: none;
+    color: #22D4FD;
+}
+
+.apresentacao_conteudo{
+    padding: 10% 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.apresentacao_conteudo{
+.conteudo{
     width: 615px;
     display: flex;
     flex-direction: column;
@@ -23,16 +50,17 @@ body{
 
 .titulo{
     font-size: 36px;
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--fonte-primaria);
 }
 
 strong{
-    color: #22D4FD;
+    color: var(--cor-terciaria);
 }
 
 .descricao_conteudo{
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
+    line-height: 1.5; /* Define o espaçamento entre linhas como 1.5 vezes a altura da fonte */
 }
 
 .botoes{
@@ -45,28 +73,28 @@ strong{
 
 .redes{
     font-size: 24px;
-    font-family: 'Krona One', sans-serif;
+    font-family: var(--fonte-primaria);
     font-weight: 400;
 }
 
 .btn{
     display: flex;
     justify-content: center;
-    border: 2px solid #22D4FD; /*Esta propriedade mostra o tamnho da borda, depois se ela é tracejada ou pontilhada, etc... e após isso a cor*/
+    border: 2px solid var(--cor-terciaria); /*Esta propriedade mostra o tamnho da borda, depois se ela é tracejada ou pontilhada, etc... e após isso a cor*/
     border-radius: 8px;
     width: 378px;
     text-align: center;
     font-size: 24px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--fonte-secundaria);
     font-weight: 600;
     text-decoration: none;
-    color: #F6F6F6;
+    color: var(--cor-secundaria);
     padding: 21.5px 0;
     gap: 16px;
 }
 
 .btn:hover{ /*hover é uma animação quando interagimos com este botão no navegador, para isso selecionamos o elemento, depois dois pontos e o nome da animação*/
-    background-color: #272727;
+    background-color: var(--cor-hover);
 
 }
 
@@ -79,5 +107,14 @@ strong{
 img{
     width: 488px;
     height: 550px;
+}
+
+aside{
+    background-color: var(--cor-terciaria);
+    padding: 23.64px ;
+    color: var(--cor-primaria);
+    font-size: 24px;
+    font-family: var(--fonte-secundaria);
+    text-align: center;
 }
 
